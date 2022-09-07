@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class rectangle_star_pattern
+{
+    public static void main(String args[])
+    {
+        Scanner input = new Scanner(System.in);
+        int n,i,j;
+        System.out.print("Enter the n value: ");
+        n=input.nextInt();
+        for(i=1;i<=n;i++)
+        {
+            for(j=1;j<=n+n;j++)
+            {
+                System.out.print("* ");
+            }
+            System.out.print("\n");
+        }
+    }
+}
