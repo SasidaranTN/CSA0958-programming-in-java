@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Even_sum_of_fibonnaci_series
+{
+    public static void main(String args[])
+    {
+        Scanner input=new Scanner(System.in);
+        System.out.print("n = ");
+        int n=input.nextInt();
+        int a=0,b=1;
+        int l=n*2;
+        int x[]=new int[100];
+        for(int i=0;i<=l;i++)
+        {
+            x[i]=a;
+            int c=a+b;
+            a=b;
+            b=c;
+        }
+        int sum=0;
+        for(int i=0;i<=l;i+=2)
+        {
+            sum=sum+x[i];
+        }
+        System.out.print(sum);
+    }
+}
