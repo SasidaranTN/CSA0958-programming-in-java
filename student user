@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Student_user
+{
+    public static void main(String args[])
+    {
+        Scanner input=new Scanner(System.in);
+        int total_users,staff_users,student_users;
+        System.out.print("Enter the Total Users: ");
+        total_users=input.nextInt();
+        System.out.print("Enter the Staff Users: ");
+        staff_users=input.nextInt();
+        int x;
+        x=staff_users/3;
+        staff_users=staff_users+x;
+        student_users=total_users-staff_users;
+        if(student_users<=0)
+            student_users=0;
+        System.out.print("Student Users: "+student_users);
+    }
+}
