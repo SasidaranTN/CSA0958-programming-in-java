@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Multiplication_table
+{
+    public static void main(String args[])
+    {
+        Scanner input = new Scanner(System.in);
+        int m,n,i;
+        try {
+            System.out.print("M = ");
+            m = input.nextInt();
+            System.out.print("N = ");
+            n = input.nextInt();
+            for (i = 1; i <= n; i++) {
+                System.out.print(i + "x" + m + "=" + i * m + "\n");
+            }
+            if (n < 0)
+                throw new Exception();
+        }
+        catch(Exception e)
+        {
+            System.out.print("Numbers would not decrease");
+        }
+    }
+}
