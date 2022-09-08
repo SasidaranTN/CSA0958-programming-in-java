@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class total_and_aggregate
+{
+    public static void main(String args[])
+    {
+        Scanner input=new Scanner(System.in);
+        int py,c,mat,phy,total;
+        float agg;
+        System.out.print("Enter the marks in python: ");
+        py=input.nextInt();
+        System.out.print("Enter the marks in c programming: ");
+        c=input.nextInt();
+        System.out.print("Enter the marks in Mathematics: ");
+        mat=input.nextInt();
+        System.out.print("Enter the marks in Physics: ");
+        phy=input.nextInt();
+        total=py+c+mat+phy;
+        float i;
+        i=total;
+        System.out.print("Total= "+total);
+        agg=(i/400)*100;
+        System.out.print("\nAggregate= "+agg+"\n");
+        if(agg>75)
+            System.out.print("DISTINCTION");
+        else if(agg>=60 && agg<75)
+            System.out.print("FIRST DIVISION");
+        else if(agg>=50 && agg<60)
+            System.out.print("SECOND DIVISION");
+        else if(agg>=40 && agg<60)
+            System.out.print("THIRD DIVISION");
+        else
+            System.out.print("FAIL");
+    }
+}
