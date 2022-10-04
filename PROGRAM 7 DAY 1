@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+class num
+
+{
+
+public static void main(String args[])
+
+{
+
+int p,n,s;
+
+char c;
+
+Scanner sc=new Scanner(System.in);
+
+System.out.print("enter the principle ammount:");
+
+p=sc.nextInt();
+
+System.out.print("enter the no of years:");
+
+n=sc.nextInt();
+
+System.out.print("is customer senior citizen (y/n)");
+
+c=sc.next().charAt(0);
+
+if(n<=0)
+
+{
+
+System.out.print("enter valid input");
+
+}
+
+else if(n<=0)
+
+{
+
+System.out.print("enter valid input");
+
+}
+
+else if(c=='y')
+
+{
+
+s=p*n*12/100;
+
+System.out.print("Intrest:"+ s);
+
+}
+
+else if(c=='n')
+
+{
+
+s=p*n*10/100;
+
+System.out.print("Intrest:"+ s);
+
+}
+
+else
+
+{
+
+System.out.print("enter valid input");
+
+}
+
+}
+
+}
+
