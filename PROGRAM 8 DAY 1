@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+class num
+
+{
+
+public static void main(String args[])
+
+{
+
+char c;
+
+Scanner sc=new Scanner(System.in);
+
+int n;
+
+System.out.print("1.given string is palindrom or not \n2.given number is palindrom or not");
+
+System.out.print("\nenter your choice:");
+
+n=sc.nextInt();
+
+if(n!=1 && n!=2)
+
+{
+
+System.out.print("\ninvalid choice");
+
+}
+
+else if(n==1)
+
+{
+
+System.out.println("Enter the string: ");  
+
+       String reverse = "";
+
+       String num = sc.nextLine();
+
+       int length = num.length();  
+
+      for ( int i = length - 1; i >= 0; i-- )  
+
+         reverse = reverse + num.charAt(i);  
+
+      if (num.equals(reverse))  
+
+         System.out.println("The entered string " +num +" is a palindrome.");  
+
+      else  
+
+         System.out.println("The entered string " +num +"  isn't a palindrome.");    
+
+}
+
+else if(n==2)
+
+{
+
+       System.out.println("Enter the number: ");  
+
+       int num=sc.nextInt();
+
+       int r,sum=0;
+
+       int temp=num;    
+
+       while(num>0)
+
+       {    
+
+       r=num%10;    
+
+       sum=(sum*10)+r;    
+
+       num=num/10;    
+
+       }    
+
+        if(temp==sum)    
+
+        System.out.println("The entered number "+temp+" is a palindrome number ");    
+
+        else    
+
+        System.out.println("The entered number "+temp+" is not a palindrome");    
+
+}
+
+else{
+
+System.out.print("\ninvalid input");
+
+}
+
+}
+
+}
