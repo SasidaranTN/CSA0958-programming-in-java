@@ -1,0 +1,45 @@
+package Bonus;
+import java.util.*;
+
+public class bonus {
+    public static void main(String[] Args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter Employee GRADE : ");
+        String g = sc.next();
+
+        System.out.println("Enter Employee SALARY : ");
+        int s = sc.nextInt();
+
+        float bonus = 0.0f;
+
+        if(s > 0){
+            if(g.equals("A") || g.equals("B")){
+                if(g.equals("A") && s >= 10000){
+                    bonus = 0.05f*s;
+                }
+                else if(g.equals("A") && s <10000){
+                    bonus = 0.07f*s;
+                }
+                else if(g.equals("B") && s >= 10000){
+                    bonus = 0.1f*s;
+                }
+                else if(g.equals("B") && s < 10000){
+                    bonus = 0.12f*s;
+                }
+
+                System.out.println("\nSALARY : " + s);
+                System.out.println("BONUS : " + bonus);
+                System.out.println("TOTAL : " + (s + bonus));
+            }
+            else{
+                System.out.println("Enter a Valid Grade");
+            }
+        }
+        else{
+            System.out.println("Enter a Valid Salary");
+        }
+
+
+    }
+}
