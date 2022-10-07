@@ -1,0 +1,68 @@
+import java.util.*;
+	
+
+	public class DAY2LCMGCD {
+	
+
+	    public static int gcd(int a, int b){
+	        int num,den;
+	        if(a>b){
+	            num = a;
+	            den = b;
+	        }
+	        else{
+	            num = b;
+	            den = a;
+	        }
+	
+
+	        int rem = num%den;
+	        if(rem == 0){
+	            return den;
+	        }
+	        return gcd(rem,den);
+	    }
+	    public static int lcm(int gcd, int a[]){
+	        int mul  =1;
+	        for(int i = 0;i<a.length;i++){
+	            mul = mul*a[i];
+	        }
+	        int lcm = mul/gcd;
+	        return lcm;
+	    }
+	    public static void main(String[] Args){
+	        Scanner sc = new Scanner(System.in);
+	
+
+	        int size;
+	        System.out.println("No.of Elements : ");
+	        size = sc.nextInt();
+	
+
+	        int arr[] = new int[size];
+	
+
+	        if(size>0){
+	            System.out.println("Enter Elements : ");
+	            for(int i = 0;i<size;i++){
+	                arr[i] = sc.nextInt();
+	            }
+	
+
+	            int g = gcd(arr[0],arr[1]);
+	            for(int i = 2;i<size;i++){
+	                g = gcd(g,arr[i]);
+	            }
+	
+
+	            int l = lcm(g,arr);
+	            System.out.println("GCD : " + g);
+	            System.out.println("LCM : " + l);
+	        }
+	        else{
+	            System.out.println("Enter a valid Limit");
+	        }
+	
+
+	    }
+	}
